@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="https://unpkg.com/7.css">
 <div class="background">
     <div id="drag" class="window glass" style="max-width: 320px">
-      <div class="title-bar">
+      <div id="header" class="title-bar">
         <div class="title-bar-text">xcDoors 7</div>
         <div class="title-bar-controls">
           <button aria-label="Minimize"></button>
@@ -20,9 +20,9 @@ dragElement(document.getElementById("drag"));
 
 function dragElement(elmnt) {
   var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-  if (document.getElementById(elmnt.id + "title-bar")) {
+  if (document.getElementById(elmnt.id + "header")) {
     // if present, the header is where you move the DIV from:
-    document.getElementById(elmnt.id + "title-bar").onmousedown = dragMouseDown;
+    document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
   } else {
     // otherwise, move the DIV from anywhere inside the DIV:
     elmnt.onmousedown = dragMouseDown;
