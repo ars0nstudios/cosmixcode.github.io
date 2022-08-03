@@ -1,5 +1,11 @@
 
 <link rel="stylesheet" href="https://unpkg.com/7.css">
+<style>
+  body {
+    background-image: url("https://cdn.discordapp.com/attachments/875567227145945088/1003497709258424370/IMG_2614.png?width=827&height=465");
+    background-size: cover;
+  }
+</style>
 <div class="background">
     <div id="drag" class="window glass" style="max-width: 320px">
       <div id="header" class="title-bar">
@@ -14,6 +20,10 @@
       </div>
     </div>
   </div>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery-ui@1.13.2/dist/jquery-ui.min.js"></script>
   <script>
-$( ".window" ).draggable({ handle: ".title-bar" });
+$( function() {
+    $( ".window" ).draggable();
+  } );
   </script>
